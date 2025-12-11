@@ -1,9 +1,10 @@
 {
-  "outputDirectory": "cartel-sigilos-dist",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+  "version": 2,
+  "builds": [
+    { "src": "cartel-sigilos-dist/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/cartel-sigilos-dist/index.html" },
+    { "src": "/(.*)", "dest": "/cartel-sigilos-dist/$1" }
   ]
 }
