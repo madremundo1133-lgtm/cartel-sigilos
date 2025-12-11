@@ -1,10 +1,10 @@
 {
   "version": 2,
   "builds": [
-    { "src": "cartel-sigilos-dist/**", "use": "@vercel/static" }
+    { "src": "cartel-sigilos-ready-to-deploy/**", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/", "dest": "/cartel-sigilos-dist/index.html" },
-    { "src": "/(.*)", "dest": "/cartel-sigilos-dist/$1" }
+    { "src": "/", "dest": "/cartel-sigilos-ready-to-deploy/index.html" },
+    { "src": "/(.*)", "dest": "/cartel-sigilos-ready-to-deploy/$1" }
   ]
 }
