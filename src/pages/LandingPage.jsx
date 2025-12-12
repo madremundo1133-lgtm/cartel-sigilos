@@ -121,17 +121,18 @@ const LandingPage = () => {
         
         console.log('Payload a enviar:', payload);
         
-        // Usar no-cors para evitar problemas de CORS con Google Apps Script
-        fetch(endpoint, {
+        // Enviar a Google Apps Script
+        const response = await fetch(endpoint, {
           method: 'POST',
-          mode: 'no-cors',
           headers: {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify(payload),
+          redirect: 'follow'
         });
         
-        console.log('✅ Petición enviada exitosamente');
+        const result = await response.json();
+        console.log('✅ Respuesta del servidor:', result);
       } else {
         console.error('❌ No hay endpoint configurado');
       }
