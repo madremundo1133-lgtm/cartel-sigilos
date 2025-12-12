@@ -124,15 +124,11 @@ const LandingPage = () => {
         // Enviar a Google Apps Script
         const response = await fetch(endpoint, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
+          mode: 'no-cors',
           body: JSON.stringify(payload),
-          redirect: 'follow'
         });
         
-        const result = await response.json();
-        console.log('✅ Respuesta del servidor:', result);
+        console.log('✅ Petición enviada');
       } else {
         console.error('❌ No hay endpoint configurado');
       }
