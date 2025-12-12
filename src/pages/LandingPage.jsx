@@ -109,7 +109,7 @@ const LandingPage = () => {
     
     try {
       // Google Apps Script endpoint
-      const endpoint = import.meta.env.VITE_FORM_ENDPOINT || '';
+      const endpoint = import.meta.env.VITE_FORM_ENDPOINT || 'https://script.google.com/macros/s/AKfycbxibiao-fd_SDAi0P8iaMgJ6K2tmBUgBQ5yFSNEkz-GHnRPW-qWXZ0EC2NNt0nVrM6-ag/exec';
       console.log('Endpoint:', endpoint);
       
       if (endpoint) {
