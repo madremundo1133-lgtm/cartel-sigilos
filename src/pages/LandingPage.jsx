@@ -121,11 +121,14 @@ const LandingPage = () => {
         
         console.log('Payload a enviar:', payload);
         
-        // Enviar a Google Apps Script
-        const response = await fetch(endpoint, {
+        // Enviar a Google Apps Script usando FormData para evitar CORS
+        const formData = new URLSearchParams();
+        formData.append('data', JSON.stringify(payload));
+        
+        fetch(endpoint, {
           method: 'POST',
           mode: 'no-cors',
-          body: JSON.stringify(payload),
+          body: formData,
         });
         
         console.log('✅ Petición enviada');
