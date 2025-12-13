@@ -121,14 +121,12 @@ const LandingPage = () => {
         
         console.log('Payload a enviar:', payload);
         
-        // Enviar a Google Apps Script usando FormData para evitar CORS
-        const formData = new URLSearchParams();
-        formData.append('data', JSON.stringify(payload));
+        // Enviar a Google Apps Script usando GET params para mayor compatibilidad
+        const url = `${endpoint}?name=${encodeURIComponent(nombre)}&email=${encodeURIComponent(email)}`;
         
-        fetch(endpoint, {
-          method: 'POST',
+        fetch(url, {
+          method: 'GET',
           mode: 'no-cors',
-          body: formData,
         });
         
         console.log('✅ Petición enviada');
