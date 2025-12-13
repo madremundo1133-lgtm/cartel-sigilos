@@ -76,17 +76,17 @@ const ThankYouPage = () => {
 
   const downloadDossier = () => {
     try {
-      const pdfUrl = '/lo que aprenderás.pdf';
+      const pdfUrl = '/Lo%20que%20aprender%C3%A1s.pdf';
       const link = document.createElement('a');
       link.href = pdfUrl;
-      link.setAttribute('download', 'lo que aprenderás.pdf');
+      link.setAttribute('download', 'Lo que aprenderás.pdf');
       link.style.display = 'none';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
     } catch (err) {
       console.error("Error descarga:", err);
-      window.open('/lo que aprenderás.pdf', '_blank');
+      window.open('/Lo%20que%20aprender%C3%A1s.pdf', '_blank');
     }
   };
 
