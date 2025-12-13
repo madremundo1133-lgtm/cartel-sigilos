@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Star, Sparkles, Zap, Eye, PenTool, Flame, Ghost, Activity, Crown, Monitor, Scroll, Compass, Users, Gift, Mail, Lock, X, Loader2, MessageCircle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
@@ -79,6 +79,15 @@ const LandingPage = () => {
   const logoUrl = new URL('../utils/logo.png', import.meta.url).href;
   const [showPopup, setShowPopup] = useState(false);
   const navigate = useNavigate();
+
+  // Inicializar botón de PayPal
+  useEffect(() => {
+    if (window.paypal) {
+      window.paypal.HostedButtons({
+        hostedButtonId: "757D9E83LBNKY",
+      }).render("#paypal-container-757D9E83LBNKY");
+    }
+  }, []);
 
   const syllabus = [
     { icon: <Eye size={16} />, title: "MOD 1", subtitle: "Mecánica del Deseo" },
@@ -261,6 +270,11 @@ const LandingPage = () => {
               <span className="text-5xl font-serif text-amber-500 font-bold drop-shadow-[0_0_25px_rgba(245,158,11,0.4)]">399€</span>
             </div>
             <p className="text-white text-[9px] font-bold uppercase tracking-wider mt-1">Cristaliza tu acceso antes del cambio de ciclo</p>
+            
+            {/* Botón de PayPal */}
+            <div className="mt-3 w-full max-w-xs mx-auto">
+              <div id="paypal-container-757D9E83LBNKY"></div>
+            </div>
           </div>
 
           <div className="bg-stone-800/60 border border-amber-500/20 rounded p-2 backdrop-blur-sm shadow-lg">
