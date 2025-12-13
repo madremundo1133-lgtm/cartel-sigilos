@@ -76,17 +76,17 @@ const ThankYouPage = () => {
 
   const downloadDossier = () => {
     try {
-      const pdfUrl = '/dossier-sigilos.pdf';
+      const pdfUrl = '/lo que aprenderás.pdf';
       const link = document.createElement('a');
       link.href = pdfUrl;
-      link.setAttribute('download', 'Dossier-Informativo-Iniciacion.pdf');
+      link.setAttribute('download', 'lo que aprenderás.pdf');
       link.style.display = 'none';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
     } catch (err) {
       console.error("Error descarga:", err);
-      window.open('/dossier-sigilos.pdf', '_blank');
+      window.open('/lo que aprenderás.pdf', '_blank');
     }
   };
 
