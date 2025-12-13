@@ -2,21 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Ocultar el botón amarillo de PayPal, dejar solo el azul */
-#paypal-container-757D9E83LBNKY > div:first-child,
-#paypal-container-757D9E83LBNKY > div:nth-child(1) {
-  display: none !important;
-  visibility: hidden !important;
-  height: 0 !important;
-  overflow: hidden !important;
-}
-
-/* Asegurar que el segundo botón (azul) se muestre */
-#paypal-container-757D9E83LBNKY > div:nth-child(2) {
-  display: block !important;
-  visibility: visible !important;
-}
-
 body {
   margin: 0;
   padding: 0;

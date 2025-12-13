@@ -80,15 +80,6 @@ const LandingPage = () => {
   const [showPopup, setShowPopup] = useState(false);
   const navigate = useNavigate();
 
-  // Inicializar botón de PayPal
-  useEffect(() => {
-    if (window.paypal) {
-      window.paypal.HostedButtons({
-        hostedButtonId: "757D9E83LBNKY",
-      }).render("#paypal-container-757D9E83LBNKY");
-    }
-  }, []);
-
   const syllabus = [
     { icon: <Eye size={16} />, title: "MOD 1", subtitle: "Mecánica del Deseo" },
     { icon: <PenTool size={16} />, title: "MOD 2", subtitle: "Ingeniería de Sigilos I" },
