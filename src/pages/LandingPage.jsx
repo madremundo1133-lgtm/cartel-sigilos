@@ -261,6 +261,15 @@ const LandingPage = () => {
               <span className="text-5xl font-serif text-amber-500 font-bold drop-shadow-[0_0_25px_rgba(245,158,11,0.4)]">399€</span>
             </div>
             <p className="text-white text-[9px] font-bold uppercase tracking-wider mt-1">Cristaliza tu acceso antes del cambio de ciclo</p>
+            
+            {/* Botón de PayPal */}
+            <div className="mt-3 w-full max-w-xs mx-auto">
+              <form action="https://www.paypal.com/ncp/payment/757D9E83LBNKY" method="post" target="_blank" style={{display:'inline-grid', justifyItems:'center', alignContent:'start', gap:'0.5rem'}}>
+                <input className="pp-757D9E83LBNKY" type="submit" value="Comprar ahora" />
+                <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
+                <section style={{fontSize: '0.75rem'}}> Tecnología de <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style={{height:'0.875rem', verticalAlign:'middle'}}/></section>
+              </form>
+            </div>
           </div>
 
           <div className="bg-stone-800/60 border border-amber-500/20 rounded p-2 backdrop-blur-sm shadow-lg">
