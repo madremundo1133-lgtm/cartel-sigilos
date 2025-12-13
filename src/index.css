@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Ocultar el botón amarillo de PayPal, dejar solo el azul */
+#paypal-container-757D9E83LBNKY > div:first-child {
+  display: none !important;
+}
+
 body {
   margin: 0;
   padding: 0;

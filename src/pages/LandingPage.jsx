@@ -277,6 +277,52 @@ const LandingPage = () => {
             </div>
           </div>
 
+          <div className="bg-stone-800/60 border border-amber-500/20 rounded p-2 backdrop-blur-sm shadow-lg">
+            <p className="text-center text-amber-500 text-[9px] uppercase tracking-[0.2em] font-bold mb-1">CANALES DE INSCRIPCIÓN</p>
+            <div className="grid grid-cols-2 gap-2 mb-2">
+              <a 
+                href="https://wa.me/34679387348?text=Hola%2C%20quiero%20información%20sobre%20el%20curso%20de%20Sigilos"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 p-1 rounded hover:bg-white/5 transition-colors cursor-pointer group"
+              >
+                <div className="bg-amber-500/10 p-1 rounded-full border border-amber-500/20 group-hover:border-amber-500/50 transition-colors">
+                  <MessageCircle size={12} className="text-amber-500" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[7px] text-stone-400 uppercase tracking-wider font-bold">WhatsApp</span>
+                  <span className="text-white text-[10px] font-medium tracking-wide font-sans">+34 679 387348</span>
+                </div>
+              </a>
+              <a 
+                href="mailto:cursos@academynexus.es?subject=Información%20Curso%20Sigilos"
+                className="flex items-center space-x-2 p-1 rounded hover:bg-white/5 transition-transitions cursor-pointer group"
+              >
+                <div className="bg-amber-500/10 p-1 rounded-full border border-amber-500/20 group-hover:border-amber-500/50 transition-colors">
+                  <Mail size={12} className="text-amber-500" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[7px] text-stone-400 uppercase tracking-wider font-bold">Email</span>
+                  <span className="text-white text-[8px] font-medium tracking-tight font-sans">cursos@academynexus.es</span>
+                </div>
+              </a>
+            </div>
+            <a 
+              href="https://t.me/PresenciaViva"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center space-x-2 p-2 rounded bg-gradient-to-r from-sky-900/30 to-blue-900/30 border border-sky-500/30 hover:border-sky-400/50 transition-all cursor-pointer group w-full"
+            >
+              <div className="bg-sky-500/10 p-1.5 rounded-full border border-sky-500/30 group-hover:border-sky-400/50 transition-colors">
+                <MessageCircle size={14} className="text-sky-400" />
+              </div>
+              <div className="flex flex-col items-start">
+                <span className="text-[7px] text-sky-300 uppercase tracking-wider font-bold">Únete al grupo Telegram</span>
+                <span className="text-white text-[10px] font-medium">Comunidad Academy Nexus</span>
+              </div>
+            </a>
+          </div>
+
           <div className="bg-stone-900/80 border border-amber-500/30 rounded-sm p-3 mt-4 text-center space-y-2">
             <h4 className="text-amber-500 text-[9px] font-serif uppercase tracking-[0.2em] font-bold">RECIBE EL DOSSIER DE LA INICIACIÓN</h4>
             <p className="text-white text-[9px] leading-relaxed">Pincha en este código y deja tu nombre y correo para recibir en tu email el dossier completo de la Iniciación en Sigilos.</p>
